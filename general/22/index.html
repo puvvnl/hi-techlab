@@ -33,7 +33,8 @@
         .checklist ul { list-style: none; padding: 0; }
         .checklist li { padding: 4px 0 4px 24px; position: relative; }
         .checklist li::before { content: '✔'; position: absolute; left: 0; color: var(--success); font-weight: bold; }
-        .doc-link { text-decoration: none; color: #2563eb; background: #eff6ff; padding: 8px 14px; border-radius: 6px; font-weight: 600; border: 1px solid #dbeafe; margin-right: 10px; }
+        .doc-link { text-decoration: none; color: #2563eb; background: #eff6ff; padding: 8px 14px; border-radius: 6px; font-weight: 600; border: 1px solid #dbeafe; margin-right: 10px; display: inline-block; margin-bottom: 5px; }
+        .doc-link:hover { background: #dbeafe; }
     </style>
 </head>
 <body>
@@ -82,7 +83,7 @@
         <section id="calibration" class="card">
             <div class="section-title">⚖️ Calibration</div>
             <div class="info-grid">
-                <div class="info-box"><span class="info-label">Status</span><div id="d_c_status" class="badge bg-red">❌ Expired</div></div>
+                <div class="info-box"><span class="info-label">Status</span><div id="d_c_status" class="badge bg-green">✔ Valid</div></div>
                 <div class="info-box"><span class="info-label">Last Date</span><div class="info-val" id="d_c_last">wsw</div></div>
                 <div class="info-box"><span class="info-label">Next Due</span><div class="info-val" id="d_c_next">wsw</div></div>
                 <div class="info-box"><span class="info-label">Cert No</span><div class="info-val" id="d_c_cert">wsw</div></div>
@@ -126,17 +127,31 @@ Rcf</span>
 
         <section id="documents" class="card">
             <div class="section-title">📄 Documents</div>
-            <a href="edx" id="link_calib" target="_blank" class="doc-link">📥 Calibration Cert</a>
-            <a href="edx" id="link_manual" target="_blank" class="doc-link">📖 User Manual</a>
+            <div id="d_docs_container" style="display:flex; flex-wrap:wrap; gap:10px;">
+                <a href="https://www.google.com/" target="_blank" class="doc-link">📄 Google</a>
+            </div>
         </section>
         
         <section id="status" class="card">
             <div class="section-title">🚥 Status & Legal</div>
             <div class="info-grid">
+                <!-- Internal -->
                 <div class="info-box"><span class="info-label">Custodian</span><div class="info-val" id="d_u_cust">ggg</div></div>
-                <div class="info-box"><span class="info-label">Contact</span><div class="info-val" id="d_u_cont">a</div></div>
-                <div class="info-box"><span class="info-label">Tender</span><div class="info-val" id="d_l_tender">b</div></div>
-                <div class="info-box"><span class="info-label">Warranty</span><div class="info-val" id="d_l_warr">cc</div></div>
+                <div class="info-box"><span class="info-label">Dept Contact</span><div class="info-val" id="d_u_cont">a</div></div>
+                
+                <!-- Purchase -->
+                <div class="info-box"><span class="info-label">Tender No</span><div class="info-val" id="d_l_tender">b</div></div>
+                <div class="info-box"><span class="info-label">LOI No</span><div class="info-val" id="d_l_loi"></div></div>
+                <div class="info-box"><span class="info-label">PO No</span><div class="info-val" id="d_l_po"></div></div>
+                
+                <!-- Vendor -->
+                <div class="info-box"><span class="info-label">Firm Name</span><div class="info-val" id="d_l_firm"></div></div>
+                <div class="info-box"><span class="info-label">Firm Contact</span><div class="info-val" id="d_l_firm_cont"></div></div>
+                <div class="info-box"><span class="info-label">Firm Email</span><div class="info-val" id="d_l_firm_email"></div></div>
+                <div class="info-box"><span class="info-label">GST No</span><div class="info-val" id="d_l_gst"></div></div>
+                
+                <!-- Warranty -->
+                <div class="info-box"><span class="info-label">Warranty Exp</span><div class="info-val" id="d_l_warr">cc</div></div>
             </div>
         </section>
 
@@ -148,9 +163,9 @@ Rcf</span>
                     <span id="d_qr_val" style="display:none;">https://puvvnl.github.io/hi-techlab/general/22/index.html</span>
                 </div>
                 <div class="actions">
-                    <button class="btn" style="background:#2563eb;" onclick="generateQR()">💾 QR</button>
-                    <button class="btn" style="background:#475569;" onclick="window.print()">🖨️ Print</button>
-                    <button class="btn" style="background:#06b6d4;" onclick="alert('Feedback Form')">🐞 Bug</button>
+                    <button class="btn" style="background:#2563eb; color:white; border:none; padding:8px 16px; border-radius:4px; cursor:pointer;" onclick="generateQR()">💾 QR</button>
+                    <button class="btn" style="background:#475569; color:white; border:none; padding:8px 16px; border-radius:4px; cursor:pointer;" onclick="window.print()">🖨️ Print</button>
+                    <button class="btn" style="background:#06b6d4; color:white; border:none; padding:8px 16px; border-radius:4px; cursor:pointer;" onclick="alert('Feedback Form')">🐞 Bug</button>
                 </div>
             </div>
         </section>
