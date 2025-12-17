@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformer Winding Analyser</title>
+    <title>Digital Clamp Leakage Meter</title>
     <style>
         :root { --sidebar-bg: #111827; --active-blue: #2563eb; --text-main: #334155; --bg-light: #f1f5f9; --white: #ffffff; --border: #e2e8f0; --success: #10b981; --danger: #ef4444; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg-light); color: var(--text-main); font-size: 13px; display: flex; min-height: 100vh; margin: 0; }
@@ -56,34 +56,34 @@
     <main class="main-content">
         <div class="header-card">
             <div>
-                <h1 id="d_h_name" style="margin:0; font-size:20px;">Transformer Winding Analyser</h1>
-                <p id="d_h_model" style="color:#64748b; margin:4px 0 0 0;">Elmon & SG50 WRM</p>
+                <h1 id="d_h_name" style="margin:0; font-size:20px;">Digital Clamp Leakage Meter</h1>
+                <p id="d_h_model" style="color:#64748b; margin:4px 0 0 0;"></p>
             </div>
             <div id="d_h_status" class="badge bg-green">🟢 Working</div>
         </div>
 
         <div style="text-align:center; background:#fffbeb; color:#92400e; padding:8px; border-radius:6px; margin-bottom:20px; border:1px solid #fcd34d; font-weight:600;">
-           📞 24x7 Support: <a href="tel:+91-798371-0548" id="d_h_help" style="color:#b45309;">+91-798371-0548</a>
+           📞 24x7 Support: <a href="tel:" id="d_h_help" style="color:#b45309;"></a>
         </div>
 
         <section id="asset" class="card">
             <div class="section-title">🆔 Asset & Identification</div>
             <div class="info-grid">
-                <div class="info-box"><span class="info-label">Asset ID</span><div class="info-val" id="d_a_id">TE-001</div></div>
-                <div class="info-box"><span class="info-label">Serial No</span><div class="info-val" id="d_a_serial">2081</div></div>
+                <div class="info-box"><span class="info-label">Asset ID</span><div class="info-val" id="d_a_id">TE-0027</div></div>
+                <div class="info-box"><span class="info-label">Serial No</span><div class="info-val" id="d_a_serial"></div></div>
                 <div class="info-box"><span class="info-label">Category</span><div class="info-val" id="d_a_cat">Electrical</div></div>
-                <div class="info-box"><span class="info-label">Location</span><div class="info-val" id="d_a_loc">Hi-Tech Lab, PuVVNL</div></div>
-                <div class="info-box"><span class="info-label">Department</span><div class="info-val" id="d_a_dept">Testing Division</div></div>
-                <div class="info-box"><span class="info-label">Criticality</span><div class="info-val" id="d_a_crit" style="color:#ef4444">Medium</div></div>
-                <div class="info-box"><span class="info-label">OEM</span><div class="info-val" id="d_a_oem">ELMON Systems Pvt. Ltd.</div></div>
-                <div class="info-box"><span class="info-label">Owner</span><div class="info-val" id="d_a_owner">PuVVNL</div></div>
+                <div class="info-box"><span class="info-label">Location</span><div class="info-val" id="d_a_loc"></div></div>
+                <div class="info-box"><span class="info-label">Department</span><div class="info-val" id="d_a_dept"></div></div>
+                <div class="info-box"><span class="info-label">Criticality</span><div class="info-val" id="d_a_crit" style="color:#ef4444"></div></div>
+                <div class="info-box"><span class="info-label">OEM</span><div class="info-val" id="d_a_oem"></div></div>
+                <div class="info-box"><span class="info-label">Owner</span><div class="info-val" id="d_a_owner"></div></div>
             </div>
         </section>
 
         <section id="calibration" class="card">
             <div class="section-title">⚖️ Calibration</div>
             <div class="info-grid">
-                <div class="info-box"><span class="info-label">Status</span><div id="d_c_status" class="badge bg-green">✔ Valid</div></div>
+                <div class="info-box"><span class="info-label">Status</span><div id="d_c_status" class="badge bg-red"></div></div>
                 <div class="info-box"><span class="info-label">Last Date</span><div class="info-val" id="d_c_last"></div></div>
                 <div class="info-box"><span class="info-label">Next Due</span><div class="info-val" id="d_c_next"></div></div>
                 <div class="info-box"><span class="info-label">Cert No</span><div class="info-val" id="d_c_cert"></div></div>
@@ -94,27 +94,26 @@
 
         <section id="technical" class="card">
             <div class="section-title">⚡ Technical Specifications</div>
-            <table class="tech-table"><tbody id="dynamic_tech_body"><tr><td>Manufacturer</td><td>Elmon Instruments Pvt. Ltd., India</td></tr><tr><td>Model</td><td>SG50 WRM</td></tr><tr><td>Instrument Type</td><td>Winding Resistance & Motor/Transformer Analyzer</td></tr><tr><td>Applications</td><td>• Measurement of DC winding resistance of motors, generators, and transformers</td></tr><tr><td></td><td>• Verification of winding integrity and detection of inter-turn faults</td></tr><tr><td></td><td>• On-site testing of MV and LV motors, generators, and transformers</td></tr><tr><td></td><td>• Condition monitoring and preventive maintenance</td></tr><tr><td>Measurement Range</td><td>0.1 mΩ – 1000 Ω (depending on test current)</td></tr><tr><td>Measurement Accuracy</td><td>±0.2% of reading ±1 LSD</td></tr><tr><td>Test Current</td><td>Up to 50 A DC (selectable)</td></tr><tr><td>Test Voltage</td><td>< 5 V DC during measurement</td></tr><tr><td>Test Methods</td><td>Four-terminal (Kelvin) measurement for accurate resistance reading</td></tr><tr><td>Display</td><td>Large digital LCD / graphic display with backlight</td></tr><tr><td>Data Storage</td><td>Internal memory for up to 500 readings; PC interface via USB</td></tr><tr><td>Test Programs / Features</td><td>• Auto test</td></tr><tr><td></td><td>• Manual measurement</td></tr><tr><td></td><td>• Continuous monitoring</td></tr><tr><td></td><td>• Automatic calculation of resistance per phase</td></tr><tr><td></td><td>• Motor winding ratio calculation</td></tr><tr><td>Power Supply</td><td>230 V AC, 50/60 Hz or battery-operated (optional)</td></tr><tr><td>Safety Features</td><td>• Overcurrent protection</td></tr><tr><td></td><td>• Short-circuit protection</td></tr><tr><td></td><td>• CE / IEC compliant safety standards</td></tr><tr><td>Dimensions</td><td>Approx. 350 × 250 × 150 mm</td></tr><tr><td>Weight</td><td>Approx. 7 kg</td></tr><tr><td>Operating Temperature</td><td>0°C – 50°C</td></tr><tr><td>Storage Temperature</td><td>–20°C – 60°C</td></tr><tr><td>Environmental Conditions</td><td>Up to 85% RH, non-condensing</td></tr><tr><td>Compliance / Standards</td><td>IEC 61557-1, IEC 61557-4, CE certified</td></tr></tbody></table>
+            <table class="tech-table"><tbody id="dynamic_tech_body"></tbody></table>
         </section>
 
         <section id="safety" class="card">
             <div class="section-title">🛡️ Safety & Checks</div>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-                <div class="checklist"><h4>✅ Pre-Use Check</h4><ul id="d_s_pre"><li>DO ensure all equipment is properly earthed (grounded) before starting any test.</li><li>DO use equipment only after you have been trained and authorized.</li><li>DO follow the Standard Operating Procedure (SOP) for every test.</li><li>DO check all cables and probes for damage before use.</li><li>DO maintain a clean and organized workspace. Return tools and equipment after use.</li><li>DO record all test data accurately and immediately.</li></ul></div>
-                <div class="checklist"><h4>⛔ Don'ts</h4><ul id="d_s_dont"><li>DON'T bypass any safety features or interlocks on equipment.</li><li>DON'T wear metallic jewelry (rings, watches, chains) in testing areas.</li><li>DON'T use any equipment that appears damaged or has an overdue calibration date.</li><li>DON'T assume a circuit is de-energized. Always verify with a proper detector.</li><li>DON'T take shortcuts in testing procedures.</li></ul></div>
+                <div class="checklist"><h4>✅ Pre-Use Check</h4><ul id="d_s_pre"></ul></div>
+                <div class="checklist"><h4>⛔ Don'ts</h4><ul id="d_s_dont"></ul></div>
             </div>
             <div style="margin-top:15px; background:#fff1f2; padding:10px; border-left:4px solid #ef4444; color:#991b1b;">
-                <strong>⚠️ Warning:</strong> <span id="d_s_warn">DON'T operate any equipment beyond its rated capacity. 
-DON'T leave active tests or running equipment unattended.</span>
+                <strong>⚠️ Warning:</strong> <span id="d_s_warn"></span>
             </div>
         </section>
 
         <section id="maintenance" class="card">
             <div class="section-title">🔧 Maintenance & History</div>
             <div class="info-grid" style="margin-bottom:15px;">
-                <div class="info-box"><span class="info-label">Frequency</span><div class="info-val" id="d_m_freq">On Breakdown</div></div>
-                <div class="info-box"><span class="info-label">Last Maint</span><div class="info-val" id="d_m_last">01-01-2026</div></div>
-                <div class="info-box"><span class="info-label">By</span><div class="info-val" id="d_m_by">Mr. Pradeep Kumar Singh</div></div>
+                <div class="info-box"><span class="info-label">Frequency</span><div class="info-val" id="d_m_freq"></div></div>
+                <div class="info-box"><span class="info-label">Last Maint</span><div class="info-val" id="d_m_last"></div></div>
+                <div class="info-box"><span class="info-label">By</span><div class="info-val" id="d_m_by"></div></div>
             </div>
             <h4>📜 Service History</h4>
             <table class="hist-table">
@@ -126,7 +125,7 @@ DON'T leave active tests or running equipment unattended.</span>
         <section id="documents" class="card">
             <div class="section-title">📄 Documents</div>
             <div id="d_docs_container" style="display:flex; flex-wrap:wrap; gap:10px;">
-                <a href="https://drive.google.com/file/d/1BoyafLhkX0sYkdCiBK0LXt10rxLCQ6SB/view?usp=drive_link" target="_blank" class="doc-link">📄 Datasheet</a>
+                <em>No documents attached.</em>
             </div>
         </section>
         
@@ -134,19 +133,19 @@ DON'T leave active tests or running equipment unattended.</span>
             <div class="section-title">🚥 Status & Legal</div>
             <div class="info-grid">
                 <!-- Internal -->
-                <div class="info-box"><span class="info-label">Custodian</span><div class="info-val" id="d_u_cust">Mr. Pradeep Kumar Singh</div></div>
-                <div class="info-box"><span class="info-label">Dept Contact</span><div class="info-val" id="d_u_cont">+91-88875-69779</div></div>
+                <div class="info-box"><span class="info-label">Custodian</span><div class="info-val" id="d_u_cust"></div></div>
+                <div class="info-box"><span class="info-label">Dept Contact</span><div class="info-val" id="d_u_cont"></div></div>
                 
                 <!-- Purchase -->
                 <div class="info-box"><span class="info-label">Tender No</span><div class="info-val" id="d_l_tender"></div></div>
-                <div class="info-box"><span class="info-label">LOI No</span><div class="info-val" id="d_l_loi">996/PVVNL-MT/MM/129/24-25 dated 09.05.2025</div></div>
-                <div class="info-box"><span class="info-label">PO No</span><div class="info-val" id="d_l_po">2722/PUVVNL(V)MM-1/EE-1/PVVNL/MT/MM/125/24-25 dated 08.07.2027</div></div>
+                <div class="info-box"><span class="info-label">LOI No</span><div class="info-val" id="d_l_loi"></div></div>
+                <div class="info-box"><span class="info-label">PO No</span><div class="info-val" id="d_l_po"></div></div>
                 
                 <!-- Vendor -->
-                <div class="info-box"><span class="info-label">Firm Name</span><div class="info-val" id="d_l_firm">S M Ststems</div></div>
+                <div class="info-box"><span class="info-label">Firm Name</span><div class="info-val" id="d_l_firm"></div></div>
                 <div class="info-box"><span class="info-label">Firm Contact</span><div class="info-val" id="d_l_firm_cont"></div></div>
-                <div class="info-box"><span class="info-label">Firm Email</span><div class="info-val" id="d_l_firm_email">sales@smsystems.co.in</div></div>
-                <div class="info-box"><span class="info-label">GST No</span><div class="info-val" id="d_l_gst">09ABPFS5129L1ZG</div></div>
+                <div class="info-box"><span class="info-label">Firm Email</span><div class="info-val" id="d_l_firm_email"></div></div>
+                <div class="info-box"><span class="info-label">GST No</span><div class="info-val" id="d_l_gst"></div></div>
                 
                 <!-- Warranty -->
                 <div class="info-box"><span class="info-label">Warranty Exp</span><div class="info-val" id="d_l_warr"></div></div>
@@ -157,8 +156,8 @@ DON'T leave active tests or running equipment unattended.</span>
             <div class="section-title">📱 QR Actions</div>
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
                 <div style="font-size:12px; color:#64748b;">
-                    Updated: <span id="d_meta_upd" style="font-weight:bold;">01-12-2025</span> | Ver: <span id="d_meta_ver"></span>
-                    <span id="d_qr_val" style="display:none;">https://puvvnl.github.io/hi-techlab/electrical/TE-001/index.html</span>
+                    Updated: <span id="d_meta_upd" style="font-weight:bold;"></span> | Ver: <span id="d_meta_ver"></span>
+                    <span id="d_qr_val" style="display:none;">https://puvvnl.github.io/hi-techlab/electrical/TE-0027/index.html</span>
                 </div>
                 <div class="actions">
                     <button class="btn" style="background:#2563eb; color:white; border:none; padding:8px 16px; border-radius:4px; cursor:pointer;" onclick="generateQR()">💾 QR</button>
